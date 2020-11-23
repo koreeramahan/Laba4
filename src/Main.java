@@ -23,7 +23,7 @@ public class Main {
         form3.setLocation(600, 230);
 
         F4 form4 = new F4();
-        form4.setSize(300, 100);
+        form4.setSize(300, 60);
         form4.setTitle("Диалоговое окно");
         form4.setVisible(true);
         form4.setLocation(600, 400);

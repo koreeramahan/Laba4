@@ -7,26 +7,26 @@ import java.awt.*;
 @SuppressWarnings("serial")
 public class F4 extends JFrame
 {
-    private JTextArea text;
+    private JTextField textField;
     private JButton button;
 
     public F4()
     {
         Container container = getContentPane(); //объект на основе класса контейнер
         container.setLayout(new GridLayout(1, 2, 5, 5)); //создаем слой
-        text = new JTextArea();
-        container.add(text);
+        textField = new JTextField();
+        container.add(textField);
         button = new JButton("Отобразить");
-        button.addActionListener(new ButtonListiner());
+        button.addActionListener(new ButtonListener());
         container.add(button);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    class ButtonListiner implements ActionListener
+    class ButtonListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
-            String str = text.getText();
+            String str = textField.getText();
             if (!str.equals(""))
             {
                 JOptionPane.showMessageDialog(
